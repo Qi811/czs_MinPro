@@ -1,0 +1,79 @@
+<!--pages/taskdetail/taskdetail.wxml-->
+<view class="body">
+	<!-- <view class="title">
+      <image src="../../images/back.png" bind:tap="back" />
+      任务详情
+    </view> -->
+	<!-- 任务内容 -->
+	<view class="taskname">
+		<view class="tasktop">
+			<image src="http://m.qpic.cn/psc?/V50dOJzn1X8x9j30JRSn1m2wvI1zBnm3/45NBuzDIW489QBoVep5mcQV9xElmR5tvUJUhFNbB2SsXRFm7WmXJ5i1vaSbyqt0C.1xrTLRpGvDAu3wi2PfO3OlwSunQdxl4OlHCvUPkoVg!/b&bo=lACQAAAAAAADFzY!&rf=viewer_4" class="tasktopleft"></image>
+			<view class="tasktopright">
+				<text>任务名称：{{ list.title }}</text>
+				<text>完成时间：{{time}}</text>
+			</view>
+		</view>
+		<view class="taskbtom">
+			<text style="padding-top: 6px;">剩余：{{ list.maxNum }}</text>
+			<text>+<text class="taskmo">{{ list.price }}</text></text>
+		</view>
+	</view>
+	<view class="taskstate">
+		<view class="state">任务说明：</view>
+		<!-- <view class="statent">{{ content}}</view> -->
+		<!-- <rich-text nodes="{{ content}}"></rich-text> -->
+		<import src="../../wxParse/wxParse.wxml" />
+		<template is="wxParse" data="{{wxParseData:content.nodes}}" />
+	</view>
+	<!-- 图片上传及备注 -->
+	<view class="{{taskpull ? tanull : takpull}}">
+		<view class="taskpullimg">
+			<view class="page__bd">
+				<mp-cells>
+					<mp-cell>
+						<mp-uploader bindfail="uploadError" bindsuccess="uploadSuccess" select="{{selectFile}}" upload="{{uplaodFile}}" files="{{files}}" delete="true" max-count="5" title="任务提交" tips="最多上传5张"></mp-uploader>
+					</mp-cell>
+				</mp-cells>
+			</view>
+		</view>
+		<view class="taskpulltxt">
+			<view>备注：</view>
+			<textarea type="text" bindinput="textva" placeholder="您可以输入手机号码(13xxxxxxxxx),及想对发单者说的内容!(非必填)"></textarea>
+		</view>
+	</view>
+	<!-- 按钮的显示 -->
+	<view class="btom" wx:if="{{fucktask}}">
+		<view class="{{taskpull ? tanull : takspull}}">
+			<button bind:tap="taskup" style="margin:0px 10px 5px 15px;line-height:1.8;">放弃任务</button>
+			<button bind:tap="taskupload" style="margin:0px 15px 5px 10px;line-height:2;">提交任务</button>
+		</view>
+		<button bind:tap="pull" style="line-height: 2;" wx:if="{{taskpull}}">领取任务</button>
+	</view>
+	<!-- 弹框 -->
+	<view class="hiit" wx:if="{{hint}}" catchtouchmove="ture">
+		<view class="hint">
+			<view style="line-height:80px;">记得上传验证图片哦~</view>
+			<button bind:tap="hintbtn" style="line-height:15px;">确认</button>
+		</view>
+	</view>
+	<view class="hiit" wx:if="{{exit}}" catchtouchmove="ture">
+		<view class="hint">
+			<view>确定要放弃吗？(注:放弃便不能再领取)</view>
+			<button id="cancel" bind:tap="cancelbtn">取消</button>
+			<button id="sure" bind:tap="surebtn">确认</button>
+		</view>
+	</view>
+	<view class="hiit" wx:if="{{taskhit}}" catchtouchmove="ture">
+		<view class="taskhint hint">
+			<view style="line-height:50px;">风险提示</view>
+			<view style="line-height:20px;margin-bottom:20px;">如任务过程中有需要另外付费的要求，请谨慎接单操作，以免造成损失</view>
+			<button id="cancel" bind:tap="taskcelbtn">取消</button>
+			<button id="sure" bind:tap="tasksurebtn">确认</button>
+		</view>
+	</view>
+	<view class="hiit" wx:if="{{hin}}" catchtouchmove="ture">
+		<view class="hint" style="height: 100px;text-align:center;">
+			<view style="line-height:30px;margin-top:20px;">{{ tishi }}</view>
+		</view>
+	</view>
+</view>

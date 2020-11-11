@@ -1,0 +1,54 @@
+<!--pages/home/home.wxml-->
+<wxs module="numberUtil" src="../../utils/util.wxs"></wxs>
+<view class="body">
+  <view class="topimg">
+    <image
+      src="http://m.qpic.cn/psc?/V50dOJzn1X8x9j30JRSn1m2wvI1zBnm3/45NBuzDIW489QBoVep5mcQV9xElmR5tvUJUhFNbB2SsX3OzDzcflP*ZOBKQpkM9i.j4ThiwESVGNaNjY7fYfzEdQcRBoa9tROkSkwx0nrhU!/b&bo=dQNEAQAAAAADNyE!&rf=viewer_4&t=5" />
+  </view>
+  <!-- 标题栏 -->
+  <view class="toptitle">
+    <view class="ti" wx:for="{{list}}" wx:key="index" bind:tap="titleClick" data-index="{{index}}">
+      <view class="tleimg">
+        <image src="{{item.url}}"></image>
+      </view>
+      <view class="tle">{{item.name}}</view>
+    </view>
+  </view>
+
+
+  <!-- 任务栏 -->
+  <mp-tabs tabs="{{tabs}}" activeTab="{{activeTab}}" swiperClass="weui-tabs-swiper" bindtabclick="onTabClick"
+    bindchange="onChange" activeClass="tab-bar-title__selected" swiperStyle="height:{{tabsheight}}px">
+    <block wx:for="{{tabs}}" wx:key="title">
+      <view class=" tab-content" data-set="{{item}}" slot="tab-content-{{index}}" bind:tap="handleClick">
+        <!-- 任务列表 -->
+        <view wx:for="{{item.list}}" wx:key="index" class="tasklist" bind:tap="taskClick" data-taskid="{{item.id}}">
+          <view class="listimg"></view>
+          <view class="listconten">
+            <view>{{ item.title }}</view>
+            <view>剩余{{ item.max_num }}份 已领{{ item.apply_num }}份</view>
+          </view>
+          <view class="listmone"><text>{{numberUtil.numberFormat(item.price)}}</text></view>
+        </view>
+      </view>
+    </block>
+  </mp-tabs>
+  <view wx:if="{{taskdiv}}" style="margin:0px 10px;">
+    <view wx:for="{{tabs[activeTab].list}}" wx:key="index" class="tasklist" bind:tap="taskClick"
+      data-taskid="{{item.id}}">
+      <view class="listimg"></view>
+      <view class="listconten">
+        <view>{{ item.title }}</view>
+        <view>剩余{{ item.max_num }}份 已领{{ item.apply_num }}份</view>
+      </view>
+      <view class="listmone"><text>{{numberUtil.numberFormat(item.price)}}</text></view>
+    </view>
+  </view>
+
+  <view style="display: {{ nullson? 'none' : 'block' }}" class="zanwu">
+          <view>
+              暂无更多数据
+            </view>
+        </view>
+
+</view>

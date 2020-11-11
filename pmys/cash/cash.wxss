@@ -1,0 +1,158 @@
+/* pages/pmys/cash/cash.wxss */
+.cash{
+  width: 100%;
+  height: 100vh;
+  background-size: 100%;
+  /* background-color: #ececec; */
+  position: relative;
+  /* z-index: -2; */
+}
+.im{
+  height:195px;
+  position: absolute;
+  z-index: -1;
+}
+.title {
+  height: 60px;
+  width: 100%;
+  color: black;
+  font-size: 16.2px;
+  line-height: 60px;
+}
+.jr{
+  padding-top: 15px;
+  padding-right: 5px;
+  z-index:20;
+  text-align: right;
+  margin-right: 15px;
+}
+.canMoney{
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+}
+.can{
+  color: white;
+  font-size: 16px;
+  z-index:20;
+}
+.lookMoney{
+  width: 100%;
+  padding-top: 10px;
+  text-align: center;
+  z-index:20;
+}
+.look{
+  font-size: 29px;
+  color: rgb(255, 255, 255);
+  z-index:20;
+}
+.hz{
+  width: 100%;
+  text-align: center;
+}
+.inn{
+  width: 90%;
+  height: max-content;
+  margin: 20px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: lightslategray 0px 1px 10px;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+.one,.two{
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+.one :nth-child(1){
+  font-size: 16px;
+  color: rgb(51, 51, 51);
+}
+.one :nth-child(2){
+  font-size: 11px;
+  color: rgb(51, 51, 51);
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.two view{
+  font-size: 14px;
+  color: rgb(51, 51, 51);
+  margin-top: 5px;
+  margin-right: 5px;
+}
+.two input{
+  width: 100%;
+  height: 30px;
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: '正体';
+  text-align: left; 
+}
+.mon{
+  text-align: left;
+}
+.bz{
+  width: 100%;
+  text-align: center;
+}
+.inner{
+  width: 90%;
+  height: max-content;
+  margin: 20px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: lightslategray 0px 1px 10px;
+  margin-top: 25px;
+  border-radius: 10px;
+ }
+.wz{
+  font-size: 16px;
+  color: rgb(51, 51, 51);
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+.bzin {
+  display: flex;
+  flex-direction: row;
+  color: rgb(192, 196, 204);
+  padding-top: 20px;
+  padding: 10px;
+}
+.bzin textarea{
+  width: 100%;
+  height: 30px;
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: '正体';
+  text-align: left; 
+}
+.txbtn{
+  width: 90%;
+  margin: 20px;
+  font-size: 18px;
+  background: rgb(230, 67, 64);
+  color: white;
+  border-radius: 10px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+.txSetting{
+  width: 100%;
+  text-align: center;
+}
+.txse{
+  color: grey;
+  padding-bottom: 30px;
+  padding-top: 10px;
+}
+  @media screen and (max-width: 310px){
+    .tx button{
+      width: 280px;
+    }
+  }

@@ -1,0 +1,6 @@
+/* pages/pmys/beginner/beginner.wxss */
+.beg{
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}

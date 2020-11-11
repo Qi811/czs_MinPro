@@ -1,0 +1,61 @@
+<!--pages/usermy/cashInfo/cashInfo.wxml-->
+<view class="cashInfo">
+    <view class="bo">
+      <view class="zf">
+        <view class="lx">类型</view>
+        <view class="xzo">
+          <picker class="se" bindchange="isSelect" value="{{zflxindex}}" range="{{zflx}}">
+            <view class="zfname">{{zflx[wx.getStorageSync('zflxindex')?wx.getStorageSync('zflxindex'):zflxindex]}}</view>
+          </picker>
+        </view>
+      </view>
+      <view class="bank" wx:if="{{zflxindex == 1}}">
+        <view class="banklx">
+          <view class="lx">银行名称</view>
+          <view class="xz">
+            <input type="text" class="ipt" value="{{bankName}}" bindinput="bankNameInp" placeholder="请输入银行名称"/>
+          </view>
+        </view>
+        <view class="banklx">
+          <view class="lx">支行名称</view>
+          <view class="xz">
+            <input type="text" class="ipt" value="{{subbranchName}}" bindinput="subbranchNameInp" placeholder="请输入支行名称"/>
+          </view>
+        </view>
+        <view class="banklx">
+          <view class="lx">用户名</view>
+          <view class="xz">
+            <input type="text" class="ipt" value="{{bankUser}}" bindinput="bankUserInp" placeholder="请输入用户名"/>
+          </view>
+        </view>
+        <view class="banklx">
+          <view class="lx">卡号</view>
+          <view class="xz">
+            <input type="text" class="ipt" value="{{bankNumber}}" bindinput="bankNumberInp" placeholder="请输入卡号"/>
+          </view>
+        </view>
+      </view>
+
+      <view class="zfb" wx:if="{{zflxindex == 0}}">
+        <view class="zfblx">
+          <view class="lx" style="width: 80px;">用户名</view>
+          <view class="xz">
+            <input type="text" class="ipt" value="{{zfbUser}}" bindinput=zfbUserInp" placeholder="请输入用户名"/>
+          </view>
+        </view>
+        <view class="zfblx">
+          <view class="lx">支付宝账号</view>
+          <view class="xz">
+            <input type="text" class="ipt" value="{{zfbkNumber}}" bindinput=zfbkNumberInp" placeholder="请输入支付宝账号"/>
+          </view>
+        </view>
+      </view>
+
+      <view class="bt">
+        <button class="confirm-btn" bind:tap="save">提 交</button>
+      </view>
+      <view style="padding: 16px 32px;font-size: 12px;color: #999999;text-align: center;">
+        提示：请正确填写信息，否则将无法正常进行
+      </view>
+    </view>
+  </view>

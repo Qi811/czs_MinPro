@@ -1,0 +1,45 @@
+/* pages/register/register.wxss */
+.sjh,.yzm,.mm,.agmm,.usern,.tuij{
+  width: 90%;
+  height: 40px;
+  border-bottom: 1px solid gainsboro;
+  font-size: 16px;
+  line-height: 3;
+  padding-left: 6px;
+  margin-left: 5%;
+  margin-top: 11px;
+  display: flex;
+}
+.tx{
+  width: 70px;
+}
+.reipt{
+  width: 60%;
+  outline: none;
+  border: none;
+  height: 30px;
+  font-size:13px;
+  margin: 8px 0px 0px 20px;
+}
+.ag{
+  margin-left: 35px;
+}
+.zcn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.zc{
+  margin-top: 18px;
+  margin-bottom: 10px;
+  height: 42px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background: #007EFF;
+  color: white;
+  letter-spacing: 10px;
+  text-align: center;
+  font-size: 20px;
+}

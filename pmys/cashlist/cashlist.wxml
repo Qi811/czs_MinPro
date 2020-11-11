@@ -1,0 +1,40 @@
+<!--pages/usermy/income/income.wxml-->
+<view class="bodymoney">
+	<!-- 标题 -->
+	<view class="title"></view>
+
+	<!-- 时间  总计 -->
+	<view class="head">
+		<view class="font">
+			<text>总计：{{max}}</text>
+		</view>
+	</view>
+	<!-- 详情盒子 -->
+  <view class="sons">
+	<view id="son" wx:if="{{nullson}}">
+		<view class="de" wx:for="{{list}}" wx:key="index">
+			<view class="sonleft">
+				<view class="sontop">
+					{{ item.admin_remark }}
+				</view>
+				<view class="timeBottom">
+					{{ item.create_time }}
+				</view>
+			</view>
+			<view class="sonright">
+				<view class="{{moneycolor ? rightmo : rightney}}">
+					{{ item.price }}
+				</view>
+				<view class="sonbottom">
+					{{ item.statusName }}
+				</view>
+			</view>
+		</view>
+	</view>
+  </view>
+	<view style = "font-size: 18px;color: #696969;margin-top:-20px;text-align:center;display: {{ nullson? 'none' : 'block' }}">
+		      <view style="font-size: 18px;color: #696969;text-align: center;">
+			        暂无数据
+			      </view>
+		    </view>
+    </view>

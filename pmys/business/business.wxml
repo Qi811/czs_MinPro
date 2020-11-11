@@ -1,0 +1,6 @@
+<!--pages/pmys/business/business.wxml-->
+<view>
+  <image src="{{bus}}" class="bus">
+  </image>
+</view>
+

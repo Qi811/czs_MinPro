@@ -1,0 +1,40 @@
+<!--pages/pmys/cash/cash.wxml-->
+<view class="cash">
+  <image class="im" src="http://m.qpic.cn/psc?/V50dOJzn1X8x9j30JRSn1m2wvI1zBnm3/ruAMsa53pVQWN7FLK88i5iR0ENNi.fsmEr4EtF85REcY0y4pcr1yxIL4f6AzWM.tLeeEevMsrHFSMyTCcokxAW*c.vP6W7p936da4P4MQO8!/b&bo=ZQQGAgAAAAADB0c!&rf=viewer_4">
+  </image>
+  <view class="title">
+    <view class="jr" bindtap="gojr">记录</view>
+  </view>
+  <view class="canMoney">
+    <view class="can">可兑换数</view>
+  </view>
+  <view class="lookMoney">
+    <view class="look">{{tixianPrice}}</view>
+  </view>
+  <view class="hz">
+    <view class="inn">
+      <view class="one">
+        <view>兑换数</view>
+        <view>最低数额10</view>
+      </view>
+      <view class="two">
+        <view>数额</view>
+        <input type="number" placeholder="请输入数额" bindinput="getMoney" placeholder-class="mon">
+        </input>
+      </view>
+    </view>
+  </view>
+  <view class="bz">
+    <view class="inner">
+      <view class="wz">备注：</view>
+      <view class="bzin">
+        <textarea type="number" placeholder="请输入内容" bindinput="getContent" placeholder-class="mon">
+        </textarea>
+      </view>
+    </view>
+  </view>
+  <view class="txbtn" bindtap="getCash">兑换</view>
+  <view class="txSetting">
+    <view class="txse" bindtap="getcashInfo">兑换账号设置</view>
+  </view>
+</view>

@@ -1,0 +1,118 @@
+/**app.wxss**/
+@import '/images/css/reset.wxss';
+@import './miniprogram_npm/weui-miniprogram/weui-wxss/dist/style/weui.wxss';
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+image{
+  width: 100%;
+  height: 100%;
+}
+button {
+  outline: none;
+  border: none;
+}
+
+button:active {
+  opacity: 0.5;
+}
+/* 任务列表 */
+.tasklist {
+  background-color: #fff;
+  display: flex;
+  height: 100rpx;
+  margin-top: 5rpx;
+  padding: 20rpx;
+}
+
+.listimg {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: cornflowerblue;
+}
+
+.listconten {
+  flex: 2;
+  margin-left: 30rpx;
+}
+
+.listmone {
+  line-height: 100rpx;
+  margin-right: 10rpx;
+}
+/* 提示框 */
+.hiit {
+  width: 100vw;
+  height: 1000vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 88;
+}
+
+.hint {
+  width: 75%;
+  height: 150px;
+  background-color: #fff;
+  border-radius: 15px;
+  position: fixed;
+  top: 30%;
+  left: 10%;
+  z-index: 99;
+}
+
+.hint view {
+  text-align: center;
+  line-height: 80px;
+  font-size: 4vw;
+}
+
+.hint button {
+  width: 20%;
+  height: 30px;
+  border-radius: 15px;
+  background: linear-gradient( -135deg, rgba(0, 0, 255, 0.5), rgba(255, 42, 255, 0.5));
+  border: none;
+}
+
+#cancel {
+  border: 1.8px rgb(0, 123, 219, 0.5) solid;
+  background: none;
+  margin-right: 4vw;
+  margin-left: 6vw;
+  float: left;
+  width: 100px;
+  line-height: 10px;
+}
+
+#sure {
+  margin-left: 20px;
+  background: rgb(0, 123, 219, 0.5);
+  width: 100px;
+  line-height: 15px;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+

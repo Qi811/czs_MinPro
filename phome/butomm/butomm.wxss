@@ -1,0 +1,82 @@
+/* pages/butomm/butomm.wxss */
+#bo{
+  width: 100%;
+  height: 100vh;
+  background-color: #F3F3F3;
+}
+
+.homeall {
+  background-color: #fff;
+  margin: 0px 10px;
+}
+
+.allson {
+  width: 100%;
+  height: 80px;
+  border-top: 1px rgb(69, 69, 69, 0.2) solid;
+  display: flex;
+  align-items: center;
+}
+
+.allson:nth-child(1) {
+  border: none;
+}
+
+.taskphoto {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: 20px;
+  background-color: brown;
+}
+
+.tackmess {
+  flex: 1;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.tackname {
+  font-family: "Microsoft Yahei";
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.number {
+  color: #959595;
+  font-size: 12px;
+}
+
+.number span {
+  margin-left: 10px;
+}
+
+.tackmoney {
+  flex: 0.5;
+  font-family: Verdana;
+  color: red;
+  font-size: 19px;
+  text-align: right;
+  margin-right: 10px;
+  word-wrap:break-word;
+  word-break:break-all;
+  overflow: hidden;
+}
+
+.tackmoney text {
+  font-size: 15px;
+  color: #696969;
+}
+.zww{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.zw{
+  font-size: 18px;
+  color: #696969;
+  text-align: center;
+  background-color: #F3F3F3;
+  line-height: 80px;
+}

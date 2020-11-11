@@ -1,0 +1,18 @@
+<!--pages/butomm/butomm.wxml-->
+<view class="homeall">
+	<view class="allson" wx:for="{{list}}" wx:key="index" bindtap="goDetail" data-taskid="{{item.id}}">
+		<view class="taskphoto"></view>
+		<view class="tackmess">
+			<view class="tackname">{{ item.title }}</view>
+			<view class="number">
+				<span>剩余{{ item.max_num }}份</span><span>已领{{ item.apply_num }}份</span>
+			</view>
+		</view>
+		<view class="tackmoney">{{ item.price }}<text></text></view>
+	</view>
+</view>
+<view class="zww">
+   <view class="zw" wx:if="{{!nullson}}">
+      暂无数据
+   </view>
+</view>

@@ -1,0 +1,183 @@
+/* pages/my/my.wxss */
+.body {
+  background-color: #f3f3f3;
+  height: 100vh;
+}
+/* 用户信息 头部 */
+.top {
+  width: 100%;
+  background: rgba(26, 203, 203, 0.5);
+  background-size: 100%;
+}
+.usermess,
+.user {
+  display: flex;
+}
+.user {
+  padding-top: 40px;
+  padding-left: 20px;
+}
+.userimg {
+  width: 60px;
+  height: 50px;
+  background: #00AAFF;
+  border-radius: 50%;
+  padding-top: 8px;
+  overflow: hidden;
+ }
+
+ .userhead {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+  margin-left: 18px;
+  background-color: blue;
+ }
+
+ .userbody {
+  width: 50px;
+  height: 30px;
+  margin-left: 6px;
+  border-radius: 38%;
+  background-color: blue;
+ }
+.username text {
+  display: block;
+  text-align: left;
+}
+.username {
+  font-family: KaiTi;
+  font-size: 20px;
+  line-height: 30px;
+  margin-left: 15px;
+}
+.level {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 50px;
+  width: 60px;
+  font-family: zcool;
+  transform: scale(1.5, 0.9);
+  margin-left:55px;
+}
+.usermess {
+  height: 50px;
+  padding-left: 15px;
+}
+
+/* 进度条 */
+.bar{
+  margin-top: 8px;
+}
+.plan {
+  width: 220px;
+  height: 10px;
+  margin-top: -20px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 1px 2px 1px rgba(30, 30, 30, 0.5);
+}
+.plan text {
+  width: 100px;
+  height: 10px;
+  float: left;
+  display: block;
+  background: linear-gradient(-135deg, #ffcc9e, #eee);
+}
+
+/* 水滴 */
+.nav {
+  height: 40px;
+  width: 40px;
+  display: block;
+  z-index: 1;
+  font-size: 14px;
+  line-height: 40px;
+  background: #009dd9;
+  border-radius: 40px;
+  color: #fff;
+  text-align: center;
+  transform: scale(0.5);
+}
+.nav:after {
+  content: "";
+  height: 0px;
+  width: 0px;
+  border: 10px transparent solid;
+  display: block;
+  position: absolute;
+  bottom: -23px;
+  left: 5px;
+  border-right: 15px solid transparent;
+  border-top: 20px solid #009dd9;
+  border-left: 15px solid transparent;
+}
+/* 用户金额 */
+.sum {
+  margin: 10px 10px 5px 10px;
+  height: 70px;
+  border: 1px #fff solid;
+  border-radius: 5px;
+  text-align: center;
+  background-color: rgba(255, 187, 158, 0.8);
+}
+.sumtitle,
+.sumnum {
+  display: flex;
+}
+.sumtitle text,
+.sumnum text {
+  flex: 1;
+  font-family: 宋体;
+  font-weight: 700;
+  padding-top: 5px;
+}
+
+/* 用户任务 */
+.type {
+  margin: 0px 10px;
+  height: 90px;
+  border-radius: 5px;
+  background-color: #fff;
+  font-family: 宋体;
+  display: flex;
+  border: 1px rgb(69, 69, 69, 0.2) solid;
+}
+.type view {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.type view image {
+  width: 40px;
+  height: 40px;
+  background-size: 100%;
+}
+
+
+/* 选项 */
+.choose {
+  background-color: #fff;
+  margin: 10px;
+}
+.choose view {
+  height: 40px;
+  line-height: 40px;
+  text-align: left;
+  padding-left: 18px;
+  border: 1px rgb(69, 69, 69, 0.2) solid;
+}
+.choose view:first-child,
+.choose view:nth-child(2),
+.choose view:nth-child(3) {
+  border-bottom: none;
+}
+
+button{
+  outline: none;
+  border: none;
+}

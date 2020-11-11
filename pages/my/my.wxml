@@ -1,0 +1,67 @@
+<!--pages/my/my.wxml-->
+<view class="body">
+    <view class="top">
+      <view class="user">
+        <view class="userimg">
+          <view class="userhead"></view>
+     <view class="userbody"></view>
+     </view>
+        <view class="username">
+          <text>{{ list.nickname }}</text>
+          <text>ID:{{ list.id }}</text>
+        </view>
+      </view>
+      <view class="usermess">
+        <view class="level">{{ list.levelName }}</view>
+        <view class="bar">
+          <view class="nav" style="position: relative;top:-20px;left:{{navleft}}px;">{{du}}%</view>
+          <view class="plan">
+            <text ref="plantext" style="width:{{ spanwidth}}px"></text>
+          </view>
+        </view>
+      </view>
+    </view>
+   
+    <view class="sum">
+      <view class="sumtitle">
+        <text>当前</text>
+        <text>累计</text>
+      </view>
+      <view class="sumnum">
+        <text>{{ price }}</text>
+        <text>{{ pricenum }}</text>
+      </view>
+    </view>
+    <view class="type">
+      <view class="one" bind:tap="received">
+        <image src="http://m.qpic.cn/psc?/V50dOJzn1X8x9j30JRSn1m2wvI1zBnm3/ruAMsa53pVQWN7FLK88i5kjJSyXBY7wrAMZkL7n2wjqqdVX1AzURo0KLdGg5zP0w6glQVcRmoNCQXodV1OUVQsZa4mxHItQeyLVek4ds6ds!/b&bo=OAQ4BAAAAAADByI!&rf=viewer_4"></image>
+        <text>已接任务</text>
+      </view>
+      <view class="two" bind:tap="sonmoney">
+        <image src="http://m.qpic.cn/psc?/V50dOJzn1X8x9j30JRSn1m2wvI1zBnm3/45NBuzDIW489QBoVep5mcesBqAPA*cJfxm2mQ3dbJO1qcSeX6i6gjH5w.NCRVb9bcasRBO8xZDEAV9dxTZignaabB59n5YIb6Sk6de.RtEk!/b&bo=iQCKAAAAAAADFzE!&rf=viewer_4&t=5"></image>
+        <text>收支记录</text>
+      </view>
+      <view class="three" bind:tap="balance">
+        <image src="http://m.qpic.cn/psc?/V50dOJzn1X8x9j30JRSn1m2wvI1zBnm3/45NBuzDIW489QBoVep5mcesBqAPA*cJfxm2mQ3dbJO38hHDZyKKtU6NY4oasxeajGCWRpSxYWTGQddF2TZRV5p3UW.OEt3G9oo.j7nCMdr4!/b&bo=jwCOAAAAAAADFzM!&rf=viewer_4&t=5"></image>
+        <text>兑换</text>
+      </view>
+    </view>
+    <view class="choose">
+      <view bind:tap="beginner">新手指南</view>
+      <view bind:tap="uptdPaw">修改密码</view>
+      <view bind:tap="business">商务合作</view>
+      <view bind:tap="clearLogin">退出登录</view>
+    </view>
+    <view class="hiit" wx:if="{{exit}}">
+      <view class="hint">
+        <view>确定要退出吗？</view>
+        <button id="cancel" bind:tap="cancelbtn">取消</button>
+        <button id="sure" bind:tap="surebtn">确认</button>
+      </view>
+    </view>
+    <view class="hiit" wx:if="{{hin}}">
+      <view class="hint" style="height: 100px">
+        <view>{{ tishi }}</view>
+      </view>
+    </view>
+  </view>

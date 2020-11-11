@@ -1,0 +1,28 @@
+<!--pages/register/register.wxml-->
+<view class="register">
+  <view class="usern">
+    <text class="tx">昵称</text>
+    <input type="text" bindinput="nicknameInp" maxlength="10" minlength="1" placeholder="请输入昵称" class="reipt"/>
+  </view>
+  <view class="sjh">
+    <text class="tx">手机号</text>
+    <input type="number" bindinput="telInp" maxlength="11" placeholder="请输入手机号" class="reipt"/>
+  </view>
+  <view class="mm">
+    <text class="tx">密码</text>
+    <input type="password" bindinput="passInp" maxlength="18" minlength="6" placeholder="请输入密码" class="ag" class="reipt"/>
+  </view>
+  <view class="agmm">
+    <text class="tx">确认密码</text>
+    <input type="password" bindinput="twopassInp" maxlength="18" minlength="6" placeholder="请再次输入密码" class="reipt"/>
+  </view>
+  <view class="tuij">
+    <text class="tx">邀请码</text>
+    <input type="number" value="{{memberId}}" disabled="true" placeholder="邀请码" class="reipt"/>
+  </view>
+  <view class="zcn">
+    <button class="zc" bindtap="regi">
+      注册
+    </button>
+  </view>
+</view>

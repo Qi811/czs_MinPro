@@ -1,0 +1,30 @@
+.weui-tabs {
+  margin: 5rpx 20rpx;
+}
+
+.weui-tabs-bar__wrp {
+  background: #fff;
+height: 80rpx;
+border-radius: 10rpx;
+overflow: hidden;
+
+}
+
+.weui-tabs-bar__content {
+  width: 100%;
+  white-space: nowrap;
+  display: flex;
+text-align: center;
+height: 80rpx;
+}
+
+.weui-tabs-bar__item {
+  flex: 1;
+}
+
+.weui-tabs-bar__title {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #07c160;
+  line-height: 75rpx;
+}

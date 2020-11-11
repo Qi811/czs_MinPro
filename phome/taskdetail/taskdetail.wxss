@@ -1,0 +1,194 @@
+/* pages/taskdetail/taskdetail.wxss */
+@import "../../wxParse/wxParse.wxss";
+.body {
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  background-color: #ececec;
+  min-height: 533px;
+  padding-bottom: 55px;
+}
+label {
+  display: block;
+}
+/* 页面标题 */
+.title {
+  width: 100%;
+  height: 20px;
+  padding-top: 25px;
+	padding-bottom: 15px;
+  font-size: 18px;
+  color: #fff;
+  letter-spacing: 4px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #0079FE;
+  z-index: 999;
+}
+.title image {
+  width: 20px;
+  height: 25px;
+  padding-left: 20px;
+  float: left;
+  margin-right: 20px;
+}
+
+/* 任务概述 */
+.taskname {
+  height: 180px;
+  margin: 10px 10px 0px 10px;
+  border: 1px solid rgba(95, 95, 95, 0.4);
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+.tasktop,
+.taskbtom {
+  display: flex;
+}
+.tasktopleft {
+  width: 60px;
+  height: 60px;
+  margin: 15px 20px 20px 10px;
+  background-size: 100%;
+}
+.tasktopright {
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  line-height: 25px;
+  font-size: 15px;
+  font-weight: 550;
+  text-align: left;
+  justify-content: center;
+}
+.taskbtom {
+  justify-content: space-between;
+  padding: 20px 5px 0px 5px;
+}
+.taskbtom text:nth-child(2) {
+  color: #ff4e00;
+  font-size: 18px;
+  font-family: Arial;
+}
+.taskmo {
+  font-size: 22px;
+  font-family: Hannotate SC;
+  padding-left: 5px;
+}
+
+/* 任务说明 */
+.taskstate {
+  margin: 5px 10px 0px 10px;
+  border: 1px solid rgba(95, 95, 95, 0.4);
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+  white-space: normal;
+  word-break: break-all;
+}
+.state {
+  text-align: left;
+  margin-left: 8px;
+  margin-bottom: 8px;
+  font-size: 17px;
+  font-weight: 550;
+}
+.statent {
+  padding: 10px 20px;
+  background-color: #eaeaea;
+  line-height: 25px;
+  text-align: left;
+  font-size: 15px;
+}
+image{
+  width: 100%;
+  height: 100%;
+}
+
+/* 底部领取任务*/
+.btom {
+  position: fixed;
+  bottom: 0;
+  height: 55px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 11;
+}
+.btom button {
+  width: 120px;
+  height: 45px;
+  color: #eee;
+  font-size: 15px;
+  border-radius: 15px;
+  border: none;
+  background-color: #1d77ff;
+}
+.btom button:active {
+  opacity: 0.5;
+}
+.taskhint div:nth-child(1){
+	line-height:30px;
+	padding-top: 15px;
+	font-size: 18px;
+}
+.taskhint div:nth-child(2){
+	line-height:20px;
+	color: #555555;
+	text-indent: 12px;
+	text-align: left;
+	padding: 10px 0px 16px 10px;
+}
+/* 领取提交放弃任务 */
+.tanull {
+  display: none;
+}
+.takpull {
+  display: block;
+  height: 100%;
+  margin: 10px 10px;
+  padding-bottom: 10px;
+}
+.takspull {
+  display: block;
+  display: flex;
+  width: 100%;
+}
+.takspull button:nth-child(1) {
+  border: 2px solid #1d77ff;
+  background: #eee;
+  color: #1d11ff;
+}
+/* 提交图片 */
+.taskpullimg,
+.taskpulltxt {
+  height: 100%;
+  border: 1px solid rgba(95, 95, 95, 0.4);
+  border-radius: 5px;
+  background: #fff;
+  padding: 10px;
+}
+.taskpulltxt {
+  margin-top: 10px;
+  text-align: left;
+}
+.taskpulltxt textarea {
+  border: none;
+  outline: none;
+  font-size: 15px;
+  margin-top: 15px;
+  color: gray;
+  width: 100%;
+  height: 80px;
+}
+image,rich-text image{
+  width: 100%;
+  height: 100%;
+}

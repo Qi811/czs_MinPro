@@ -1,0 +1,88 @@
+/* pages/usermy/cashInfo/cashInfo.wxss */
+.cashInfo{
+  width: 100%;
+  height: 100vh;
+  background-size: 100%;
+  background-color: #F3F3F3;
+}
+.title {
+  height: 60px;
+  width: 100%;
+  color: #fefefe;
+  font-size: 16.2px;
+  display: flex;
+  line-height: 60px;
+  background-color: #FF5B41;
+}
+.fan {
+  padding-top: 30px;
+  width: 15px;
+  height: 18px;
+  padding-left: 10px;
+}
+.tit {
+  flex: 1;
+  text-align: center;
+  padding-top: 8px;
+  padding-right: 25px;
+}
+.bt{
+  width: 100%;
+  text-align: center;
+}
+.confirm-btn{
+  width: 300px;
+  height: 42px;
+  line-height: 30px;
+  border-radius: 30px;
+  margin-top: 35px;
+  background: #e10a07;
+  color: #fff;
+  font-size: 16px;
+}
+.bo{
+  margin-top: 10px;
+}
+.zf,.banklx,.zfblx{
+  height: 30px;
+  padding: 10px;
+  border-bottom: 1px solid white;
+  line-height: 30px;
+  display: flex;
+}
+.xz{
+    margin-left: 20px;
+    flex-shrink: 0;
+}
+.xzo{
+    margin-left: 16px;
+    flex-shrink: 0;
+}
+.lx{
+    flex-shrink: 0;
+    width: 80px;
+}
+.se,.ipt{
+  outline: none;
+  border: none;
+  background-color: #F3F3F3;
+  font-size: 15px;
+  margin-top: 4px;
+}
+.zfname{
+  margin-left: 4px;
+  margin-top: -4px;
+}
+@media screen and (max-width: 310px){
+  .lx{
+    font-size: 12px;
+    flex-shrink: 0;
+    width: 80px;
+  }
+  .xz{
+    flex-shrink: 0;
+  }
+  .confirm-btn{
+    width: 280px;
+  }
+}

@@ -1,0 +1,21 @@
+<!--pages/friend/friend.wxml-->
+<view class="friend">
+  <view class="two">
+    <view class="xh" wx:for="{{dataList}}" wx:key="index">
+      <view class="tp">
+        <view class="tpn">
+
+        </view>
+      </view>
+      <view class="rg">
+        <view class="ywc">{{item.nickname}}</view>
+        <view class="sj">邀请时间：{{item.create_time}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="wsj" wx:if="{{nono}}">
+    <view class="zw">
+      暂无好友
+    </view>
+  </view>
+</view>

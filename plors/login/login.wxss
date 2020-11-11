@@ -1,0 +1,36 @@
+/* pages/login/login/login.wxss */
+.tel,.pass{
+  border-bottom: 1px solid gainsboro;
+  font-size: 1.2em;
+  line-height: 3;
+  padding-left: 6px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 15px;
+}
+.ipt{
+  width: 90%;
+  outline: none;
+  border: none;
+  height: 30px;
+  font-size:13px;
+}
+.btn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dl{
+  margin-top: 32px;
+  margin-bottom: 10px;
+  height: 42px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background: #007EFF;
+  color: white;
+  letter-spacing: 10px;
+  text-align: center;
+  font-size: 20px;
+}

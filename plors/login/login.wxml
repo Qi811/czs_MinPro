@@ -1,0 +1,13 @@
+<view class="login">
+  <view class="tel">
+    <text>手机号</text>
+    <input class="ipt" bindinput="telInp"  maxlength="11" type="number" placeholder="请输入手机号"/>
+  </view>
+  <view class="pass">
+    <text>密码</text>
+    <input class="ipt" maxlength="11" bindinput="pwdInp" type="password" placeholder="请输入密码"/>
+  </view>
+  <view class="btn">
+    <button class="dl" bindtap="logins">登录</button>
+  </view>
+</view>

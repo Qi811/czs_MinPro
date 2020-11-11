@@ -1,0 +1,132 @@
+<!--pages/ptask/all/all.wxml-->
+<view class="one">
+  <view class="bodymoney">
+    <view class="wa">
+      <view class="swiper-tab">
+        <view class="tab-item {{alltab == 0 ? 'on' : ''}}" data-allrent="0" bindtap="swichNav">
+          待完成
+        </view>
+      </view>
+      <view class="swiper-tab">
+        <view class="tab-item {{alltab == 1 ? 'on' : ''}}" data-allrent="1" bindtap="swichNav">
+          审核中
+        </view>
+      </view>
+      <view class="swiper-tab">
+        <view class="tab-item {{alltab == 2 ? 'on' : ''}}" data-allrent="2" bindtap="swichNav">
+          已审核
+        </view>
+      </view>
+      <view class="swiper-tab">
+        <view class="tab-items {{alltab == 3 ? 'on' : ''}}" data-allrent="3" bindtap="swichNav">
+          审核失败
+        </view>
+      </view>
+    </view>
+    <view class="xs">
+      <swiper class="swiper" current="{{alltab}}" duration="200" bindchange="swiperChange"
+        style="margin-bottom: 20px;height:{{swiperHeight + 'px'}}">
+        <swiper-item>
+          <scroll-view scroll-y="{{true}}" scroll-top="{{scrollTop}}" style="height:auto" class="zj">
+            <view class="xh" wx:for="{{dwcList}}" wx:key="index" bind:tap="taskClick" data-taskid="{{item.task_id}}">
+              <view class="tp">
+                <view class="tpn"></view>
+              </view>
+              <view class="rg">
+                <view class="bt">{{item.title}}</view>
+                <view class="ywc">已完成{{item.member_id}}份 剩余{{item.task_id}}份</view>
+                <view class="sj">最晚将于{{list[index].end_time}}前完成审核,请耐心等待</view>
+              </view>
+              <view class="jg">
+                <view class="jgy">
+                  +{{item.price}}
+                  <view class="yuan"></view>
+                </view>
+              </view>
+            </view>
+            <view class="wsj" wx:if="{{dwc}}">
+              <view class="wsjc">
+                暂无数据
+              </view>
+            </view>
+          </scroll-view>
+        </swiper-item>
+        <swiper-item>
+          <scroll-view scroll-y="{{true}}" style="height:{{clienHeight?clienHeight+'px':'auto'}}" scroll-top="{{scrollTop}}" class="zj">
+            <view class="xh" wx:for="{{shzList}}" wx:key="index" bind:tap="taskClick" data-taskid="{{item.task_id}}">
+              <view class="tp">
+                <view class="tpn"></view>
+              </view>
+              <view class="rg">
+                <view class="bt">{{item.title}}</view>
+                <view class="ywc">已完成{{item.member_id}}份 剩余{{item.task_id}}份</view>
+                <view class="sj">最晚将于{{zhlist[index].end_time}}前完成审核,请耐心等待</view>
+              </view>
+              <view class="jg">
+                <view class="jgy">
+                  +{{item.price}}
+                  <view class="yuan"></view>
+                </view>
+              </view>
+            </view>
+          </scroll-view>
+            <view class="wsj" wx:if="{{shz}}">
+              <view class="wsjc">
+                暂无数据
+              </view>
+            </view>
+        </swiper-item>
+        <swiper-item>
+          <scroll-view scroll-y="{{true}}" style="height:{{clienHeight?clienHeight+'px':'auto'}}" scroll-top="{{scrollTop}}" class="zj">
+            <view class="xh" wx:for="{{yshList}}" wx:key="index" bind:tap="taskClick" data-taskid="{{item.task_id}}">
+              <view class="tp">
+                <view class="tpn"></view>
+              </view>
+              <view class="rg">
+                <view class="bt">{{item.title}}</view>
+                <view class="ywc">已完成{{item.member_id}}份 剩余{{item.task_id}}份</view>
+                <view class="sj">最晚将于{{yilist[index].end_time}}前完成审核,请耐心等待</view>
+              </view>
+              <view class="jg">
+                <view class="jgy">
+                  +{{item.price}}
+                  <view class="yuan"></view>
+                </view>
+              </view>
+            </view>
+            <view class="wsj" wx:if="{{ysh}}">
+              <view class="wsjc">
+                暂无数据
+              </view>
+            </view>
+          </scroll-view>
+        </swiper-item>
+        <swiper-item>
+          <scroll-view scroll-y="{{true}}" style="height:{{clienHeight?clienHeight+'px':'auto'}}" scroll-top="{{scrollTop}}" class="zj">
+            <view class="xh" wx:for="{{shsbList}}" wx:key="index" bind:tap="taskClick" data-taskid="{{item.task_id}}">
+              <view class="tp">
+                <view class="tpn"></view>
+              </view>
+              <view class="rg">
+                <view class="bt">{{item.title}}</view>
+                <view class="ywc">已完成{{item.member_id}}份 剩余{{item.task_id}}份</view>
+                <view class="sj">最晚将于{{sblist[index].end_time}}前完成审核,请耐心等待</view>
+              </view>
+              <view class="jg">
+                <view class="jgy">
+                  +{{item.price}}
+                  <view class="yuan"></view>
+                </view>
+              </view>
+            </view>
+            <view class="wsj" wx:if="{{shsb}}">
+              <view class="wsjc">
+                暂无数据
+              </view>
+            </view>
+          </scroll-view>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,5 @@
+<!--pages/pmys/beginner/beginner.wxml-->
+<view>
+  <image src="{{beg}}" class="beg">
+  </image>
+</view>

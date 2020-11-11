@@ -1,0 +1,32 @@
+<!--pages/pshare/qrcode/qrcode.wxml-->
+<view class="ewm" style="background-image: url({{imgList[num]}});">
+  <view class="inner">
+    <view class="inertwo">
+      <view class="award">
+        <view class="teamaward">
+          <text class="hd">团队获得奖励</text>
+          <text class="shu">{{teamPrice}}</text>
+        </view>
+        <view class="sucees">
+          <text class="hd">已成功邀请</text>
+          <text class="shu">{{teamSuccess}}<text  style="font-size: 15px;padding-left: 10px;">人</text></text>
+        </view>
+      </view>
+      <view class="hy">
+        <view class="seefriends" bindtap="lookFriend">
+          查看好友
+        </view>
+      </view>
+      <view class="incode">
+        <view class="code" id="imageWrapper">
+          <image src="{{dataImg[0]}}" id="qrocde" ref="qrcode" class="wm" mode="aspctFll" bindtap="LookBig" ></image>
+        </view>
+      </view>
+      <view class="twobtn">
+        <view class="btno" bindtap="save">保存二维码</view>
+        <!-- <view class="btnt" bindtap="copyText">复制推广链接</view> -->
+        <button class="btnt" open-type="share" bindtap="shareLink">分享小程序</button>
+      </view>
+    </view>
+  </view>
+</view>

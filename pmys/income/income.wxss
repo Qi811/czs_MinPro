@@ -1,0 +1,123 @@
+/* pages/usermy/income/income.wxss */
+	.bodymoney {
+	  background-size: 100%;
+    background-color: #ececec;
+    height: 100%;
+	}
+	
+	/* 标题样式 */
+	
+	.title {
+	  height: 80px;
+	  width: 100%;
+	  color: #fefefe;
+	  font-size: 16.2px;
+	  display: flex;
+    line-height: 60px;
+    background-color: rgb(254, 110, 73);
+	}
+	
+	/* 时间--总计样式 */
+	
+	.head {
+	  position: relative;
+    right:-1%;
+    top: -32px;
+	  width: 98%;
+    height: 64px;
+    background-color: rgba(222, 222, 222, 0.8);
+	}
+	
+	.font {
+	  width: 100%;
+	  height: 100%;
+	  line-height: 20px;
+	  padding-top: 8px;
+	  text-align: left;
+	}
+	
+	.font text {
+	  display: block;
+    font-size: 15px;
+	}
+	
+	.font text:nth-child(1) {
+	  color: #000000;
+	  padding-left: 23.6px;
+	  line-height: 50px;
+	 font-size: 17px;
+   font-weight: 600;
+	}
+	/*
+	.font span:nth-child(2) {
+	  color: #696969;
+	  margin-left: 28.4px;
+	}
+	 */
+	.num {
+	  width: 45px;
+	  height: 26px;
+	  position: relative;
+	  right: -90%;
+	  top: -70%;
+	  transform: scale(0.4);
+	}
+	
+	/* 详情盒子 */
+  .sons #son:nth-child(1){
+	  margin-top: -31.8px;
+  }
+	#son {
+	  background-color: white;
+	  width: 100%;
+	}
+	
+	.de {
+	  width: auto;
+	  height: 40px;
+	  margin: 0px 6px;
+	  border-top: 1px solid rgba(204, 204, 204, 0.5);
+	  padding: 12px 6px;
+	}
+	
+	.sonleft {
+	  flex: 1;
+	  float: left;
+	}
+	
+	.sonright {
+	  float: right;
+	  text-align: right;
+	}
+	
+	.sonleft,
+	.sonright {
+	  height: 40px;
+	  line-height: 20px;
+	}
+	
+	.sontop {
+	  font-size: 15px;
+	  text-align: left;
+	}
+	
+	.rightmo {
+	  color: orange;
+	  font-size: 15px;
+	  text-align: right;
+	}
+	
+	.rightney {
+	  color: black;
+	  font-size: 15px;
+	  text-align: right;
+	}
+	
+	.sonbottom {
+	  font-size: 11.2px;
+	  color: gray;
+	}
+	
+	.timeBottom{
+	  margin-top: 20px;
+	}

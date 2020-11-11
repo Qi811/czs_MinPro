@@ -1,0 +1,17 @@
+<!--pmys/uptPd/uptPd.wxml-->
+<view class="uptpd">
+  <view class="ubo">
+    <view class="umm">
+      <input class="ipt" maxlength="18" minlength="6" bindinput="nowpwdIpt" placeholder="请输入当前密码"/>
+    </view>
+    <view class="umm">
+      <input class="ipt" maxlength="18" minlength="6" bindinput="newpwdIpt" placeholder="请输入新密码"/>
+    </view>
+    <view class="umm">
+      <input class="ipt" maxlength="18" minlength="6" bindinput="agapwdIpt" placeholder="请再次输入密码"/>
+    </view>
+    <view>
+      <button class="zc" bindtap="isOK">确认修改</button>
+    </view>
+  </view>
+</view>
